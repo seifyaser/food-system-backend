@@ -1,0 +1,35 @@
+[2026-04-30T15:25:07.214Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:25:07.792Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:26:10.771Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:26:10.939Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:30:38.685Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:30:39.088Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:48:16.551Z] ERROR: User validation failed: phone: Please add a valid Egyptian phone number
+[2026-04-30T15:52:13.871Z] ERROR: Cannot destructure property 'email' of 'req.body' as it is undefined.
+[2026-04-30T15:57:38.574Z] ERROR: Invalid credentials
+[2026-04-30T15:58:33.473Z] ERROR: Invalid credentials
+[2026-04-30T15:59:55.569Z] ERROR: Invalid credentials
+[2026-04-30T16:00:17.940Z] ERROR: User validation failed: phone: Please add a valid Egyptian phone number
+[2026-04-30T16:00:24.027Z] ERROR: User validation failed: phone: Please add a valid Egyptian phone number
+[2026-04-30T16:27:54.983Z] ERROR: Auth Error: invalid signature
+[2026-04-30T16:28:24.124Z] ERROR: Product validation failed: categoryId: Path `categoryId` is required., price: Please add a price, description: Please add a description, name: Please add a product name
+[2026-04-30T16:54:12.190Z] ERROR: Category mahshi not found
+[2026-04-30T16:54:23.644Z] ERROR: Category crepe not found
+[2026-04-30T16:58:23.335Z] ERROR: Cast to ObjectId failed for value ":69f38670ecfa541727526b24" (type string) at path "_id" for model "Product"
+[2026-04-30T17:08:31.582Z] ERROR: Cast to ObjectId failed for value ":69f38903cc9d9f10cd26d18f" (type string) at path "_id" for model "Product"
+[2026-04-30T17:32:40.442Z] ERROR: Cart item not found
+[2026-04-30T17:37:12.863Z] ERROR: Cart item not found
+[2026-04-30T17:38:36.820Z] ERROR: Cart item not found
+[2026-04-30T17:39:10.244Z] ERROR: Cart item not found
+[2026-04-30T17:58:49.502Z] ERROR: Invalid or expired coupon
+[2026-04-30T18:09:31.655Z] ERROR: Product not found or unavailable
+[2026-04-30T18:11:12.296Z] ERROR: Expected double-quoted property name in JSON at position 68 (line 5 column 1)
+[2026-04-30T18:37:01.640Z] ERROR: Product not found or unavailable
+[2026-04-30T18:39:25.636Z] ERROR: Expected double-quoted property name in JSON at position 222 (line 12 column 1)
+[2026-04-30T18:50:05.460Z] ERROR: Product Unknown is not available
+[2026-04-30T18:52:08.524Z] ERROR: Product Unknown is not available
+[2026-04-30T18:56:45.842Z] ERROR: Product Unknown is not available
+[2026-04-30T19:19:56.757Z] ERROR: Product Unknown is not available
+[2026-04-30T19:20:11.900Z] ERROR: User already exists
+[2026-04-30T19:21:52.614Z] ERROR: next is not a function
+[2026-04-30T19:35:35.860Z] ERROR: Order not found

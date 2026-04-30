@@ -1,0 +1,185 @@
+[2026-04-30T15:24:25.241Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:24:27.032Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:25:07.214Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:25:07.792Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:25:36.730Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:25:57.880Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:25:59.429Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T15:26:10.771Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:26:10.939Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:30:32.116Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:30:33.756Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T15:30:38.685Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:30:39.088Z] ERROR: Cannot set property query of #<IncomingMessage> which has only a getter
+[2026-04-30T15:36:58.228Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:36:59.947Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:37:08.959Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:37:10.512Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:38:35.373Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:38:37.147Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:38:41.905Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:38:43.469Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T15:43:59.723Z] INFO: Register attempt for email: saif@gmail.com
+[2026-04-30T15:45:23.189Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:45:24.886Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:47:55.898Z] INFO: Register attempt for email: haif@gmail.com
+[2026-04-30T15:48:11.353Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:48:13.032Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:48:16.344Z] INFO: Register attempt for email: haaif@gmail.com
+[2026-04-30T15:48:16.551Z] ERROR: User validation failed: phone: Please add a valid Egyptian phone number
+[2026-04-30T15:52:13.871Z] ERROR: Cannot destructure property 'email' of 'req.body' as it is undefined.
+[2026-04-30T15:54:19.071Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:54:20.756Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T15:55:07.713Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:55:09.299Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T15:56:04.386Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:56:06.021Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T15:57:38.397Z] INFO: Login attempt for email: haaif@gmail.com
+[2026-04-30T15:57:38.574Z] ERROR: Invalid credentials
+[2026-04-30T15:58:33.308Z] INFO: Login attempt for email: haaif@gmail.com
+[2026-04-30T15:58:33.473Z] ERROR: Invalid credentials
+[2026-04-30T15:59:14.888Z] INFO: Server running in development mode on port 5000
+[2026-04-30T15:59:16.598Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T15:59:55.383Z] INFO: Login attempt for email: haaif@gmail.com
+[2026-04-30T15:59:55.569Z] ERROR: Invalid credentials
+[2026-04-30T16:00:17.760Z] INFO: Register attempt for email: hekl@gmail.com
+[2026-04-30T16:00:17.940Z] ERROR: User validation failed: phone: Please add a valid Egyptian phone number
+[2026-04-30T16:00:23.854Z] INFO: Register attempt for email: hekl@gmail.com
+[2026-04-30T16:00:24.027Z] ERROR: User validation failed: phone: Please add a valid Egyptian phone number
+[2026-04-30T16:00:26.836Z] INFO: Register attempt for email: hekl@gmail.com
+[2026-04-30T16:00:41.814Z] INFO: Login attempt for email: hekl@gmail.com
+[2026-04-30T16:01:16.780Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:01:18.442Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T16:01:24.636Z] INFO: Login attempt for email: hekl@gmail.com
+[2026-04-30T16:01:38.409Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:01:39.999Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T16:01:40.235Z] INFO: Login attempt for email: hekl@gmail.com
+[2026-04-30T16:25:54.604Z] INFO: Login attempt for email: saif@gmail.com
+[2026-04-30T16:27:54.983Z] ERROR: Auth Error: invalid signature
+[2026-04-30T16:28:24.124Z] ERROR: Product validation failed: categoryId: Path `categoryId` is required., price: Please add a price, description: Please add a description, name: Please add a product name
+[2026-04-30T16:39:51.493Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:39:53.523Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T16:45:38.383Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:45:40.579Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T16:45:43.759Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:45:45.810Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T16:45:49.857Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:45:51.812Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T16:45:57.630Z] INFO: Server running in development mode on port 5000
+[2026-04-30T16:45:59.565Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T16:54:12.190Z] ERROR: Category mahshi not found
+[2026-04-30T16:54:23.644Z] ERROR: Category crepe not found
+[2026-04-30T16:58:23.335Z] ERROR: Cast to ObjectId failed for value ":69f38670ecfa541727526b24" (type string) at path "_id" for model "Product"
+[2026-04-30T17:08:31.582Z] ERROR: Cast to ObjectId failed for value ":69f38903cc9d9f10cd26d18f" (type string) at path "_id" for model "Product"
+[2026-04-30T17:25:07.636Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:25:09.392Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:31:19.854Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:31:22.052Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T17:31:25.272Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:31:26.887Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:31:32.534Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:31:34.177Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:32:40.442Z] ERROR: Cart item not found
+[2026-04-30T17:34:40.218Z] INFO: Login attempt for email: saif@gmail.com
+[2026-04-30T17:36:33.475Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:36:35.285Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:37:12.863Z] ERROR: Cart item not found
+[2026-04-30T17:38:36.820Z] ERROR: Cart item not found
+[2026-04-30T17:39:10.244Z] ERROR: Cart item not found
+[2026-04-30T17:41:07.591Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:41:09.284Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T17:46:18.749Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:46:20.420Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:46:25.102Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:46:26.664Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:46:29.585Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:46:31.167Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:46:34.665Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:46:36.251Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:46:52.703Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:46:54.292Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T17:49:47.682Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:49:49.445Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:50:02.017Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:50:03.621Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:50:30.049Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:50:31.643Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:50:41.151Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:50:42.795Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:50:47.947Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:50:49.669Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:50:55.602Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:50:57.301Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T17:54:10.968Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:54:12.717Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:54:18.066Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:54:19.648Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T17:56:36.843Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:56:38.603Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:56:42.430Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:56:44.033Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T17:56:51.832Z] INFO: Server running in development mode on port 5000
+[2026-04-30T17:56:53.419Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T17:58:49.502Z] ERROR: Invalid or expired coupon
+[2026-04-30T18:07:03.777Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:07:05.493Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T18:07:09.953Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:07:11.590Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:09:31.655Z] ERROR: Product not found or unavailable
+[2026-04-30T18:11:12.296Z] ERROR: Expected double-quoted property name in JSON at position 68 (line 5 column 1)
+[2026-04-30T18:29:36.363Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:29:38.911Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:29:42.110Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:29:43.984Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T18:29:47.783Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:29:49.672Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T18:29:54.365Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:29:55.993Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T18:30:02.009Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:30:03.695Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T18:30:07.453Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:30:09.067Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:30:13.951Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:30:15.529Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T18:30:24.313Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:30:25.966Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T18:34:16.284Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:34:18.462Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:34:21.718Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:34:24.016Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T18:34:27.660Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:34:29.660Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T18:34:36.407Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:34:38.277Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:34:42.420Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:34:44.414Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:34:47.804Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:34:49.773Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T18:37:01.640Z] ERROR: Product not found or unavailable
+[2026-04-30T18:39:25.636Z] ERROR: Expected double-quoted property name in JSON at position 222 (line 12 column 1)
+[2026-04-30T18:50:05.460Z] ERROR: Product Unknown is not available
+[2026-04-30T18:52:08.524Z] ERROR: Product Unknown is not available
+[2026-04-30T18:54:17.560Z] INFO: Login attempt for email: saif@gmail.com
+[2026-04-30T18:56:45.842Z] ERROR: Product Unknown is not available
+[2026-04-30T18:58:15.431Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:58:17.011Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T18:58:20.926Z] INFO: Server running in development mode on port 5000
+[2026-04-30T18:58:22.447Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-04-30T19:19:56.757Z] ERROR: Product Unknown is not available
+[2026-04-30T19:20:11.743Z] INFO: Register attempt for email: hekl@gmail.com
+[2026-04-30T19:20:11.900Z] ERROR: User already exists
+[2026-04-30T19:20:19.345Z] INFO: Register attempt for email: bayomi@gmail.com
+[2026-04-30T19:20:30.955Z] INFO: Login attempt for email: bayomi@gmail.com
+[2026-04-30T19:21:52.614Z] ERROR: next is not a function
+[2026-04-30T19:22:37.695Z] INFO: Server running in development mode on port 5000
+[2026-04-30T19:22:39.624Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-04-30T19:22:42.054Z] INFO: Server running in development mode on port 5000
+[2026-04-30T19:22:43.611Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T19:27:44.581Z] INFO: Login attempt for email: saif@gmail.com
+[2026-04-30T19:35:35.860Z] ERROR: Order not found
+[2026-04-30T19:37:09.245Z] INFO: Server running in development mode on port 5000
+[2026-04-30T19:37:10.808Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T19:37:18.045Z] INFO: Server running in development mode on port 5000
+[2026-04-30T19:37:19.515Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-04-30T19:42:02.036Z] INFO: Server running in development mode on port 5000
+[2026-04-30T19:42:03.698Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
