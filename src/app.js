@@ -4,13 +4,32 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger');
 const logger = require('./utils/logger');
 const { errorHandler } = require('./middlewares/errorHandler');
 
 const app = express();
 
-// Security HTTP headers
-app.use(helmet());
+// Swagger UI — mounted BEFORE helmet CSP so its assets load correctly
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  customSiteTitle: '🍔 Food Ordering API Docs',
+  swaggerOptions: { persistAuthorization: true }
+}));
+
+// Security HTTP headers (CSP relaxed for swagger route above)
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", 'data:']
+      }
+    }
+  })
+);
 
 // Logging
 if (process.env.NODE_ENV === 'development') {
