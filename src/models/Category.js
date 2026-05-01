@@ -13,7 +13,7 @@ const categorySchema = new mongoose.Schema({
     default: 'no-photo.jpg'
   }
 }, {
-  timestamps: true
+  timestamps: true // Add createdAt and updatedAt fields automatically
 });
 
 module.exports = mongoose.model('Category', categorySchema);

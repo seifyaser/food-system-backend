@@ -7,6 +7,7 @@ const { validate } = require('../middlewares/validate');
 const router = express.Router();
 
 // Validation Schemas
+//Joi هو مكتبة في Node.js بتستخدمها عشان تتحقق من البيانات (validation) اللي جاية من اليوزر قبل ما تدخلها السيستم.
 const registerSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().email().required(),

@@ -2,6 +2,7 @@ const Order = require('../models/Order');
 const Cart = require('../models/Cart');
 const NotificationService = require('./notificationService');
 const User = require('../models/User');
+const CouponService = require('./couponService');
 
 class OrderService {
   static formatOrder(order) {
@@ -94,7 +95,7 @@ class OrderService {
     let subtotalPrice = 0;
     const orderItems = [];
 
-    // Calculate total price and build order items (taking snapshot of price)
+    // Calculate subtotal and build order items (snapshot price at checkout time)
     for (const item of cart.items) {
       const product = item.productId;
       if (!product || !product.isAvailable) {
@@ -111,9 +112,27 @@ class OrderService {
       });
     }
 
+    // --- Bug #1 Fix: Apply cart coupon to the order ---
     let discountAmount = 0;
     let totalPrice = subtotalPrice;
     let appliedCoupon = { couponId: null, code: null };
+
+    const couponCode = cart.appliedCoupon?.code;
+    if (couponCode) {
+      try {
+        const coupon = await CouponService.getValidCouponByCode(couponCode);
+        const discount = CouponService.calculateDiscount(coupon, subtotalPrice);
+        discountAmount = discount.discountAmount;
+        totalPrice = discount.finalTotal;
+        appliedCoupon = { couponId: coupon._id, code: coupon.code };
+      } catch {
+        // Coupon expired or deactivated between cart and checkout — proceed without it
+        discountAmount = 0;
+        totalPrice = subtotalPrice;
+        appliedCoupon = { couponId: null, code: null };
+      }
+    }
+    // --- End fix ---
 
     const order = await Order.create({
       userId,
