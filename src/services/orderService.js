@@ -20,7 +20,6 @@ class OrderService {
         productId: rawProduct ? rawProduct._id : item.productId,
         product: rawProduct
           ? {
-              productId: rawProduct._id,
               name: rawProduct.name,
               image: rawProduct.image
             }
@@ -41,7 +40,6 @@ class OrderService {
       userId: rawUser && typeof rawUser === 'object' ? rawUser._id : rawUser,
       user: rawUser && typeof rawUser === 'object'
         ? {
-            userId: rawUser._id,
             name: rawUser.name,
             email: rawUser.email
           }
@@ -55,8 +53,6 @@ class OrderService {
         code: rawOrder.appliedCoupon?.code || null,
         coupon: rawCoupon && typeof rawCoupon === 'object'
           ? {
-              couponId: rawCoupon._id,
-              code: rawCoupon.code,
               discountType: rawCoupon.discountType,
               value: rawCoupon.value
             }

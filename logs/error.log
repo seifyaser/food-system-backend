@@ -33,3 +33,10 @@
 [2026-04-30T19:20:11.900Z] ERROR: User already exists
 [2026-04-30T19:21:52.614Z] ERROR: next is not a function
 [2026-04-30T19:35:35.860Z] ERROR: Order not found
+[2026-05-01T13:02:15.199Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:03:57.325Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:04:08.778Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:04:21.119Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:04:30.142Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:05:52.348Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:16:53.865Z] ERROR: Auth Error: invalid signature

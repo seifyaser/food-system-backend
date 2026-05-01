@@ -189,3 +189,23 @@
 [2026-05-01T11:48:58.025Z] INFO: Server running in development mode on port 5000
 [2026-05-01T11:48:58.145Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
 [2026-05-01T11:48:59.609Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-05-01T11:49:11.014Z] INFO: Server running in development mode on port 5000
+[2026-05-01T11:49:11.391Z] INFO: Server running in development mode on port 5000
+[2026-05-01T11:49:12.568Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-05-01T11:49:12.930Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-05-01T11:51:18.887Z] INFO: Server running in development mode on port 5000
+[2026-05-01T11:51:20.582Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-05-01T11:51:39.845Z] INFO: Server running in development mode on port 5000
+[2026-05-01T11:51:41.410Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-05-01T12:18:07.453Z] INFO: Server running in production mode on port 5000
+[2026-05-01T12:18:07.470Z] INFO: Server running in production mode on port 5000
+[2026-05-01T12:18:09.276Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-05-01T12:18:09.289Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-02.ew3phcq.mongodb.net
+[2026-05-01T13:01:17.226Z] INFO: Login attempt for email: saif@gmail.com
+[2026-05-01T13:02:15.199Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:03:57.325Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:04:08.778Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:04:21.119Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:04:30.142Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:05:52.348Z] ERROR: Category validation failed: name: Please add a category name
+[2026-05-01T13:16:53.865Z] ERROR: Auth Error: invalid signature
