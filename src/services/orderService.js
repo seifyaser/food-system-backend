@@ -190,6 +190,7 @@ class OrderService {
     const orders = await Order.find()
       .sort('-createdAt')
       .populate('userId', 'name email')
+      .populate('items.productId', 'name image')
       .populate('appliedCoupon.couponId', 'code discountType value');
 
     return orders.map((order) => this.formatOrder(order));

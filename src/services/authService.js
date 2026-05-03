@@ -5,9 +5,9 @@ class AuthService {
   const { name, email, password, phone } = userData;
 
   // Check if user exists
-  const userExists = await User.findOne({ email });
+  const userExists = await User.findOne({ phone });
   if (userExists) {
-    const error = new Error('User already exists');
+    const error = new Error('Phone number already exists');
     error.statusCode = 400;
     throw error;
   }
