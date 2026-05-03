@@ -24,9 +24,9 @@ class AuthService {
   return user;
 }
 
-  static async loginUser(email, password, fcmToken) {
+  static async loginUser(phone, password, fcmToken) {
     // Check for user
-    const user = await User.findOne({ email }).select('+password');
+    const user = await User.findOne({ phone }).select('+password');
 
     if (!user) {
       const error = new Error('Invalid credentials');
