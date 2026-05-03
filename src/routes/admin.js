@@ -11,7 +11,9 @@ router.use(authorize('admin'));
 
 // Orders
 const updateStatusSchema = Joi.object({
-  status: Joi.string().valid('PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY', 'DELIVERED', 'CANCELLED', 'REJECTED').required()
+  status: Joi.string().valid('PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY', 'DELIVERED', 'CANCELLED', 'REJECTED').required(),
+  driverName: Joi.string().optional(),
+  driverPhone: Joi.string().optional()
 });
 
 router.get('/orders', getAllOrders);

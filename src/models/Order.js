@@ -73,6 +73,16 @@ const orderSchema = new mongoose.Schema({
       required: [true, 'Please add delivery longitude']
     }
   },
+  driver: {
+    name: {
+      type: String,
+      default: null
+    },
+    phone: {
+      type: String,
+      default: null
+    }
+  },
   note: {
     type: String,
     default: null

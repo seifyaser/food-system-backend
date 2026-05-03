@@ -67,7 +67,10 @@ class OrderService {
         location: {
           lat: rawOrder.deliveryAddress.lat,
           lng: rawOrder.deliveryAddress.lng
-        }
+        },
+        driver: rawOrder.driver && (rawOrder.driver.name || rawOrder.driver.phone)
+          ? { name: rawOrder.driver.name, phone: rawOrder.driver.phone }
+          : null
       },
       payment: {
         method: rawOrder.paymentMethod
@@ -224,7 +227,7 @@ class OrderService {
   }
 
   // Admin method
-  static async updateOrderStatus(orderId, status) {
+  static async updateOrderStatus(orderId, status, driverInfo = {}) {
     const order = await Order.findById(orderId);
     if (!order) {
       const error = new Error('Order not found');
@@ -234,6 +237,14 @@ class OrderService {
 
     order.status = status;
     order.statusHistory.push({ status, timestamp: new Date() });
+
+    if (status === 'OUT_FOR_DELIVERY' && (driverInfo.driverName || driverInfo.driverPhone)) {
+      order.driver = {
+        name: driverInfo.driverName || null,
+        phone: driverInfo.driverPhone || null
+      };
+    }
+
     await order.save();
 
     // Trigger Notification

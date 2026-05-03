@@ -97,7 +97,8 @@ const options = {
           type: 'object',
           properties: {
             productId: { type: 'string' },
-            product: { type: 'object' },
+            name: { type: 'string' },
+            image: { type: 'string' },
             quantity: { type: 'integer' },
             price: { type: 'number' }
           }
@@ -105,22 +106,48 @@ const options = {
         Order: {
           type: 'object',
           properties: {
-            orderId: { type: 'string' },
-            userId: { type: 'string' },
+            id: { type: 'string' },
             items: { type: 'array', items: { $ref: '#/components/schemas/OrderItem' } },
-            subtotalPrice: { type: 'number' },
-            discountAmount: { type: 'number' },
-            totalPrice: { type: 'number' },
-            appliedCoupon: { type: 'object' },
-            status: {
-              type: 'string',
-              enum: ['PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY', 'DELIVERED', 'CANCELLED', 'REJECTED']
+            pricing: {
+              type: 'object',
+              properties: {
+                subtotal: { type: 'number' },
+                discount: { type: 'number' },
+                total: { type: 'number' }
+              }
             },
-            statusHistory: { type: 'array', items: { type: 'object' } },
-            deliveryAddress: { type: 'object' },
-            paymentMethod: { type: 'string', enum: ['cash'] },
+            coupon: {
+              type: 'object',
+              nullable: true,
+              properties: {
+                id: { type: 'string' },
+                code: { type: 'string' },
+                discount: { type: 'number' }
+              }
+            },
+            status: {
+              type: 'object',
+              properties: {
+                code: { type: 'string', enum: ['PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY', 'DELIVERED', 'CANCELLED', 'REJECTED'] },
+                label: { type: 'string' }
+              }
+            },
+            delivery: {
+              type: 'object',
+              properties: {
+                address: { type: 'string' },
+                location: { type: 'object', properties: { lat: { type: 'number' }, lng: { type: 'number' } } },
+                driver: { type: 'object', nullable: true, properties: { name: { type: 'string' }, phone: { type: 'string' } } }
+              }
+            },
+            payment: {
+              type: 'object',
+              properties: { method: { type: 'string', enum: ['cash'] } }
+            },
             note: { type: 'string', nullable: true },
-            createdAt: { type: 'string', format: 'date-time' }
+            timeline: { type: 'array', items: { type: 'object', properties: { status: { type: 'string' }, at: { type: 'string', format: 'date-time' } } } },
+            createdAt: { type: 'string', format: 'date-time' },
+            updatedAt: { type: 'string', format: 'date-time' }
           }
         },
         Coupon: {
@@ -409,8 +436,12 @@ const options = {
           tags: ['Orders'],
           summary: 'Get all orders for the current user',
           security: [{ bearerAuth: [] }],
+          parameters: [
+            { name: 'page', in: 'query', schema: { type: 'integer', default: 1 } },
+            { name: 'limit', in: 'query', schema: { type: 'integer', default: 10 } }
+          ],
           responses: {
-            200: { description: 'Order history', content: { 'application/json': { schema: { type: 'object', properties: { success: { type: 'boolean' }, count: { type: 'integer' }, data: { type: 'array', items: { $ref: '#/components/schemas/Order' } } } } } } }
+            200: { description: 'Paginated order history', content: { 'application/json': { schema: { type: 'object', properties: { success: { type: 'boolean' }, count: { type: 'integer' }, pagination: { type: 'object' }, data: { type: 'array', items: { $ref: '#/components/schemas/Order' } } } } } } }
           }
         }
       },
@@ -489,10 +520,14 @@ const options = {
       '/api/v1/admin/orders': {
         get: {
           tags: ['Admin'],
-          summary: 'Get ALL orders in the system (admin only)',
+          summary: 'Get ALL orders in the system with pagination (admin only)',
           security: [{ bearerAuth: [] }],
+          parameters: [
+            { name: 'page', in: 'query', schema: { type: 'integer', default: 1 } },
+            { name: 'limit', in: 'query', schema: { type: 'integer', default: 10 } }
+          ],
           responses: {
-            200: { description: 'All orders' },
+            200: { description: 'Paginated all orders', content: { 'application/json': { schema: { type: 'object', properties: { success: { type: 'boolean' }, count: { type: 'integer' }, pagination: { type: 'object' }, data: { type: 'array', items: { $ref: '#/components/schemas/Order' } } } } } } },
             403: { description: 'Admin only' }
           }
         }
@@ -514,8 +549,10 @@ const options = {
                     status: {
                       type: 'string',
                       enum: ['PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY', 'DELIVERED', 'CANCELLED', 'REJECTED'],
-                      example: 'ACCEPTED'
-                    }
+                      example: 'OUT_FOR_DELIVERY'
+                    },
+                    driverName: { type: 'string', example: 'Ahmed' },
+                    driverPhone: { type: 'string', example: '01012345678' }
                   }
                 }
               }

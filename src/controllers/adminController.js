@@ -19,8 +19,8 @@ exports.getAllOrders = asyncHandler(async (req, res) => {
 });
 
 exports.updateOrderStatus = asyncHandler(async (req, res) => {
-  const { status } = req.body;
-  const order = await OrderService.updateOrderStatus(req.params.id, status);
+  const { status, driverName, driverPhone } = req.body;
+  const order = await OrderService.updateOrderStatus(req.params.id, status, { driverName, driverPhone });
   res.status(200).json({
     success: true,
     data: order
