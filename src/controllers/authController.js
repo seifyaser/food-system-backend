@@ -26,10 +26,10 @@ exports.register = asyncHandler(async (req, res) => {
 });
 
 exports.login = asyncHandler(async (req, res) => {
-  const { email, password, fcmToken } = req.body;
-  logger.info(`Login attempt for email: ${email}`);
+  const { phone, password, fcmToken } = req.body;
+  logger.info(`Login attempt for phone: ${phone}`);
 
-  const user = await AuthService.loginUser(email, password, fcmToken);
+  const user = await AuthService.loginUser(phone, password, fcmToken);
   sendTokenResponse(user, 200, res);
 });
 

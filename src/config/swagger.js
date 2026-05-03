@@ -184,9 +184,9 @@ const options = {
               'application/json': {
                 schema: {
                   type: 'object',
-                  required: ['email', 'password'],
+                  required: ['phone', 'password'],
                   properties: {
-                    email: { type: 'string', format: 'email', example: 'ahmed@example.com' },
+                    phone: { type: 'string', format: 'phone', example: '01012345678' },
                     password: { type: 'string', example: 'password123' },
                     fcmToken: { type: 'string', example: 'device_fcm_token_here', description: 'Optional — mobile FCM token for push notifications' }
                   }
