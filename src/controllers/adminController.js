@@ -6,11 +6,15 @@ const Product = require('../models/Product');
 // --- ORDERS ---
 
 exports.getAllOrders = asyncHandler(async (req, res) => {
-  const orders = await OrderService.getAllOrders();
+  const page = parseInt(req.query.page, 10) || 1;
+  const limit = parseInt(req.query.limit, 10) || 10;
+
+  const result = await OrderService.getAllOrders(page, limit);
   res.status(200).json({
     success: true,
-    count: orders.length,
-    data: orders
+    count: result.orders.length,
+    pagination: result.pagination,
+    data: result.orders
   });
 });
 

@@ -16,53 +16,64 @@ class OrderService {
         : null;
 
       return {
-        orderItemId: item._id,
         productId: rawProduct ? rawProduct._id : item.productId,
-        product: rawProduct
-          ? {
-              name: rawProduct.name,
-              image: rawProduct.image
-            }
-          : null,
+        name: rawProduct ? rawProduct.name : undefined,
+        image: rawProduct ? rawProduct.image : undefined,
         quantity: item.quantity,
         price: item.price
       };
     });
 
-    const formattedStatusHistory = rawOrder.statusHistory.map((entry) => ({
-      statusHistoryId: entry._id,
+    const statusLabels = {
+      'PENDING': 'Pending',
+      'ACCEPTED': 'Accepted',
+      'PREPARING': 'Preparing',
+      'OUT_FOR_DELIVERY': 'Out for Delivery',
+      'DELIVERED': 'Delivered',
+      'CANCELLED': 'Cancelled',
+      'REJECTED': 'Rejected'
+    };
+
+    const timeline = rawOrder.statusHistory.map((entry) => ({
       status: entry.status,
-      timestamp: entry.timestamp
+      at: entry.timestamp
     }));
 
+    let coupon = null;
+    if (rawOrder.appliedCoupon && rawOrder.appliedCoupon.code) {
+      coupon = {
+        id: rawCoupon && typeof rawCoupon === 'object' ? rawCoupon._id : rawCoupon,
+        code: rawOrder.appliedCoupon.code,
+        discount: rawOrder.discountAmount
+      };
+    }
+
     return {
-      orderId: rawOrder._id,
+      id: rawOrder._id,
       userId: rawUser && typeof rawUser === 'object' ? rawUser._id : rawUser,
-      user: rawUser && typeof rawUser === 'object'
-        ? {
-            name: rawUser.name,
-            email: rawUser.email
-          }
-        : null,
       items: formattedItems,
-      totalPrice: rawOrder.totalPrice,
-      subtotalPrice: rawOrder.subtotalPrice,
-      discountAmount: rawOrder.discountAmount,
-      appliedCoupon: {
-        couponId: rawCoupon && typeof rawCoupon === 'object' ? rawCoupon._id : rawCoupon,
-        code: rawOrder.appliedCoupon?.code || null,
-        coupon: rawCoupon && typeof rawCoupon === 'object'
-          ? {
-              discountType: rawCoupon.discountType,
-              value: rawCoupon.value
-            }
-          : null
+      pricing: {
+        subtotal: rawOrder.subtotalPrice,
+        discount: rawOrder.discountAmount,
+        total: rawOrder.totalPrice
       },
-      status: rawOrder.status,
-      deliveryAddress: rawOrder.deliveryAddress,
+      coupon,
+      status: {
+        code: rawOrder.status,
+        label: statusLabels[rawOrder.status] || rawOrder.status
+      },
+      delivery: {
+        address: rawOrder.deliveryAddress.address,
+        location: {
+          lat: rawOrder.deliveryAddress.lat,
+          lng: rawOrder.deliveryAddress.lng
+        }
+      },
+      payment: {
+        method: rawOrder.paymentMethod
+      },
       note: rawOrder.note || null,
-      paymentMethod: rawOrder.paymentMethod,
-      statusHistory: formattedStatusHistory,
+      timeline,
       createdAt: rawOrder.createdAt,
       updatedAt: rawOrder.updatedAt
     };
@@ -164,13 +175,21 @@ class OrderService {
     return await this.getOrderById(order._id);
   }
 
-  static async getMyOrders(userId) {
+  static async getMyOrders(userId, page = 1, limit = 10) {
+    const skip = (page - 1) * limit;
+
+    const total = await Order.countDocuments({ userId });
     const orders = await Order.find({ userId })
       .sort('-createdAt')
+      .skip(skip)
+      .limit(limit)
       .populate('items.productId', 'name image')
       .populate('appliedCoupon.couponId', 'code discountType value');
 
-    return orders.map((order) => this.formatOrder(order));
+    return {
+      pagination: { page, limit, total },
+      orders: orders.map((order) => this.formatOrder(order))
+    };
   }
 
   static async getOrderById(orderId) {
@@ -186,14 +205,22 @@ class OrderService {
   }
 
   // Admin method
-  static async getAllOrders() {
+  static async getAllOrders(page = 1, limit = 10) {
+    const skip = (page - 1) * limit;
+
+    const total = await Order.countDocuments();
     const orders = await Order.find()
       .sort('-createdAt')
+      .skip(skip)
+      .limit(limit)
       .populate('userId', 'name email')
       .populate('items.productId', 'name image')
       .populate('appliedCoupon.couponId', 'code discountType value');
 
-    return orders.map((order) => this.formatOrder(order));
+    return {
+      pagination: { page, limit, total },
+      orders: orders.map((order) => this.formatOrder(order))
+    };
   }
 
   // Admin method

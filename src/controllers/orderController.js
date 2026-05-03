@@ -11,11 +11,15 @@ exports.createOrder = asyncHandler(async (req, res) => {
 });
 
 exports.getMyOrders = asyncHandler(async (req, res) => {
-  const orders = await OrderService.getMyOrders(req.user.id);
+  const page = parseInt(req.query.page, 10) || 1;
+  const limit = parseInt(req.query.limit, 10) || 10;
+  
+  const result = await OrderService.getMyOrders(req.user.id, page, limit);
   res.status(200).json({
     success: true,
-    count: orders.length,
-    data: orders
+    count: result.orders.length,
+    pagination: result.pagination,
+    data: result.orders
   });
 });
 

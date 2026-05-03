@@ -77,26 +77,51 @@ class CartService {
   }
 
   static async buildCartResponse(cart, couponCode = null) {
-    if (this.clearStoredCoupon(cart)) {
-      await cart.save();
-    }
-
     if (!couponCode || !couponCode.trim()) {
-      return this.formatCart(cart);
+      // If no new coupon is provided, we use the stored one if it exists
+      if (cart.appliedCoupon && cart.appliedCoupon.code) {
+        couponCode = cart.appliedCoupon.code;
+      } else {
+        return this.formatCart(cart);
+      }
+    } else {
+      couponCode = couponCode.trim();
     }
 
-    const coupon = await CouponService.getValidCouponByCode(couponCode.trim());
-    const subtotalPrice = cart.items.reduce((sum, item) => {
-      const productPrice = item.productId && typeof item.productId === 'object' ? item.productId.price : 0;
-      return sum + (productPrice * item.quantity);
-    }, 0);
+    try {
+      const coupon = await CouponService.getValidCouponByCode(couponCode);
+      
+      // Save valid coupon to cart permanently
+      cart.appliedCoupon = { couponId: coupon._id, code: coupon.code };
+      await cart.save();
 
-    const couponSummary = {
-      ...CouponService.calculateDiscount(coupon, subtotalPrice),
-      code: coupon.code
-    };
+      const subtotalPrice = cart.items.reduce((sum, item) => {
+        const productPrice = item.productId && typeof item.productId === 'object' ? item.productId.price : 0;
+        return sum + (productPrice * item.quantity);
+      }, 0);
 
-    return this.formatCart(cart, couponSummary);
+      const couponSummary = {
+        ...CouponService.calculateDiscount(coupon, subtotalPrice),
+        code: coupon.code,
+        couponId: coupon._id
+      };
+
+      return this.formatCart(cart, couponSummary);
+    } catch (error) {
+      // If coupon is invalid/expired, clear it
+      const wasStored = cart.appliedCoupon && cart.appliedCoupon.code === couponCode;
+      
+      if (this.clearStoredCoupon(cart)) {
+        await cart.save();
+      }
+      
+      // If the error was just from the previously saved coupon being invalid now, 
+      // return the cart without throwing the error to the user
+      if (wasStored) {
+        return this.formatCart(cart);
+      }
+      throw error;
+    }
   }
 
   static async getCart(userId) {
