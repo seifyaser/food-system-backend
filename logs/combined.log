@@ -209,3 +209,8 @@
 [2026-05-01T13:04:30.142Z] ERROR: Category validation failed: name: Please add a category name
 [2026-05-01T13:05:52.348Z] ERROR: Category validation failed: name: Please add a category name
 [2026-05-01T13:16:53.865Z] ERROR: Auth Error: invalid signature
+[2026-05-01T13:20:28.800Z] INFO: Server running in production mode on port 5000
+[2026-05-01T13:20:28.806Z] INFO: Server running in production mode on port 5000
+[2026-05-01T13:20:30.470Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-01.ew3phcq.mongodb.net
+[2026-05-01T13:20:30.538Z] INFO: MongoDB Connected: ac-1flkiar-shard-00-00.ew3phcq.mongodb.net
+[2026-05-01T16:24:47.668Z] INFO: Server running in production mode on port 5000

@@ -16,6 +16,8 @@ const userSchema = new mongoose.Schema({
       'Please add a valid email'
     ]
   },
+  // Use String (not Number) to preserve
+  // leading zeros and allow regex validation for Egyptian phone format
  phone: {
   type: String,
   required: [true, 'Please add a phone number'],
